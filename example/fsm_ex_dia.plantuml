@@ -1,0 +1,10 @@
+@startuml
+    title `ex` Finate State Machine
+    [*] -> State_0
+    State_0 --> State_1 : Event_1[Guard_0]
+    State_1 --> State_1 : Event_1[Guard_1]
+    State_1 --> State_2 : Event_2[Guard_1]
+    State_2 --> State_3 : Event_3[Guard_2]
+    State_3 --> State_0 : Event_0[Guard_3]
+   State_3 --> [*]: Event_2[Guard_3]
+@enduml
